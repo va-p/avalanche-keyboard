@@ -19,11 +19,41 @@
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS1";
+            label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+    };
+
+    macros {
+        bore: BORE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LT &kp M &kp O &kp D &kp MINUS &kp D &kp I &kp A &kp M &kp GT &kp B &kp O &kp R &kp E>;
+            label = "BORE";
+        };
+
+        BORE: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LT &kp LS(M) &kp LS(O) &kp LS(D) &kp MINUS &kp LS(D) &kp LS(I) &kp LS(A) &kp LS(M) &kp GT &kp LS(B) &kp LS(O) &kp LS(R) &kp LS(E) &kp RET &kp RET>;
+            label = "NEW_MACRO";
+        };
+
+        rev00: rev00 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CLCK &kp LS(I) &kp LS(N) &kp LS(I) &kp LS(T) &kp LS(I) &kp LS(A) &kp LS(L) &kp SPACE &kp LS(R) &kp LS(E) &kp LS(L) &kp LS(E) &kp LS(A) &kp LS(S) &kp LS(E) &kp SPACE &kp LS(I) &kp LS(N) &kp SPACE &kp LS(A) &kp LS(C) &kp LS(C) &kp LS(O) &kp LS(R) &kp LS(D) &kp LS(A) &kp LS(N) &kp LS(C) &kp LS(E) &kp SPACE &kp LS(W) &kp LS(I) &kp LS(T) &kp LS(H) &kp SPACE &kp LS(N) &kp LS(E) &kp LS(W) &kp RET &kp LS(D) &kp LS(R) &kp LS(A) &kp LS(W) &kp LS(I) &kp LS(N) &kp LS(G) &kp SPACE &kp LS(S) &kp LS(T) &kp LS(A) &kp LS(N) &kp LS(D) &kp LS(A) &kp LS(R) &kp LS(D) &kp CAPS>;
+            label = "REV00";
+        };
+
+        SBH: SBH {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp B &kp H>;
+            label = "SBH";
         };
     };
 
@@ -56,11 +86,11 @@
 
         Navigation {
             bindings = <
-&trans        &trans          &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans        &trans    &trans
-&trans        &trans          &kp W   &trans  &trans  &trans                  &trans  &trans  &trans  &trans        &trans    &trans
-&trans        &kp LEFT_SHIFT  &kp A   &kp S   &kp D   &trans  &trans                  &trans  &trans  &kp UP_ARROW  &trans    &trans     &trans  &trans
-&kp CAPSLOCK  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT      &kp DOWN  &kp RIGHT  &trans  &trans
-              &trans          &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans        &trans
+&trans        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans        &trans    &trans
+&trans        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans        &trans    &trans
+&trans        &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &kp UP_ARROW  &trans    &trans     &trans  &trans
+&kp CAPSLOCK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT      &kp DOWN  &kp RIGHT  &trans  &trans
+              &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans        &trans
             >;
         };
 
