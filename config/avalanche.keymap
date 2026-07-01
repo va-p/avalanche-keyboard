@@ -104,6 +104,10 @@
 &trans        &trans                &trans            &trans         &trans               &trans                  &trans  &trans  &trans      &trans    &trans         &trans           &trans             &trans           &trans  &trans
               &trans                &trans            &kp LEFT_ALT   &trans               &trans                                  &trans      &trans    &kp RIGHT_ALT  &kp RIGHT_SHIFT  &trans
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp PAGE_DOWN PAGE_UP>,
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         Bluetooth {
