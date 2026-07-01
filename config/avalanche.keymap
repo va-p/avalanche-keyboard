@@ -81,7 +81,9 @@
               &lt 1 C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &kp LEFT_COMMAND                               &kp RIGHT_COMMAND  &kp SPACE      &kp RIGHT_ALT  &kp RIGHT_SHIFT  &lt 3 ENTER
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         Navigation {
